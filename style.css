@@ -1,4 +1,4 @@
-﻿* {
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -6,64 +6,67 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
+    background-color: #030712;
+    color: #f8fafc;
 }
 
 /* Navbar */
 nav {
-    background-color: #111827;
+    background-color: #020617;
     padding: 20px;
     text-align: center;
+    border-bottom: 1px solid #172554;
 }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-size: 18px;
-        font-weight: bold;
-    }
+nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+nav a:hover {
+    color: #2563eb;
+}
 
 /* Home */
 header {
-    background-color: #0f172a;
+    background-color: #020617;
     color: white;
     text-align: center;
     padding: 100px 20px;
 }
 
-    header h1 {
-        font-size: 55px;
-        margin: 0 0 15px;
-    }
+header h1 {
+    font-size: 55px;
+    margin: 0 0 15px;
+}
 
-    header p {
-        font-size: 24px;
-        color: #38bdf8;
-    }
+header p {
+    font-size: 24px;
+    color: #2563eb;
+}
 
 /* Sections */
 section {
     max-width: 900px;
     margin: 50px auto;
     padding: 45px 30px;
-    background-color: white;
+    background-color: #0b1220;
+    border: 1px solid #172554;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-    section h2 {
-        font-size: 32px;
-    }
+section h2 {
+    font-size: 32px;
+    color: #f8fafc;
+}
 
 /* Buttons */
 button {
-    background-color: #2563eb;
+    background-color: #1d4ed8;
     color: white;
     border: none;
     padding: 12px 22px;
@@ -73,9 +76,9 @@ button {
     cursor: pointer;
 }
 
-    button:hover {
-        background-color: #1d4ed8;
-    }
+button:hover {
+    background-color: #2563eb;
+}
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -93,6 +96,7 @@ button {
         padding: 30px 20px;
     }
 }
+
 .hero-content {
     text-align: center;
     max-width: 800px;
@@ -114,6 +118,7 @@ button {
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 20px;
+    color: #f8fafc;
 }
 
 .hero-description {
@@ -121,6 +126,7 @@ button {
     line-height: 1.7;
     max-width: 600px;
     margin: 0 auto 30px;
+    color: #cbd5e1;
 }
 
 .hero-buttons {
@@ -137,11 +143,20 @@ button {
 }
 
 .primary-btn {
-    background: #2563eb;
+    background: #1d4ed8;
     color: white;
 }
 
+.primary-btn:hover {
+    background: #2563eb;
+}
+
 .secondary-btn {
-    border: 2px solid #2563eb;
-    color: #2563eb;
+    border: 2px solid #1d4ed8;
+    color: #60a5fa;
+}
+
+.secondary-btn:hover {
+    background: #1d4ed8;
+    color: white;
 }
