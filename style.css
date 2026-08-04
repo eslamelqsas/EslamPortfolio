@@ -1,0 +1,147 @@
+﻿* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Navbar */
+nav {
+    background-color: #111827;
+    padding: 20px;
+    text-align: center;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+/* Home */
+header {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+    header h1 {
+        font-size: 55px;
+        margin: 0 0 15px;
+    }
+
+    header p {
+        font-size: 24px;
+        color: #38bdf8;
+    }
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 45px 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+    section h2 {
+        font-size: 32px;
+    }
+
+/* Buttons */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #1d4ed8;
+    }
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    section {
+        margin: 25px 15px;
+        padding: 30px 20px;
+    }
+}
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero-small {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.secondary-btn {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}

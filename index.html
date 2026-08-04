@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Eslam ElQsas | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px;
+            text-align: center;
+        }
+
+            nav a {
+                color: white;
+                margin: 20px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+                nav a:hover {
+                    color: #38bdf8;
+                }
+
+        header {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+            header h1 {
+                font-size: 55px;
+                margin-bottom: 15px;
+            }
+
+            header p {
+                font-size: 24px;
+                color: #38bdf8;
+            }
+
+        section {
+            background: white;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #1d4ed8;
+            }
+        .projects-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .project-card {
+            flex: 1;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .project-card button {
+                margin-top: auto;
+                align-self: flex-start;
+            }
+
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .project-card h3 {
+                color: #2563eb;
+            }
+
+            .project-card p {
+                line-height: 1.6;
+            }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <p class="hero-small">HELLO, I'M</p>
+
+            <h1>Eslam ElQsas</h1>
+
+            <h2>Web Developer</h2>
+
+            <p class="hero-description">
+                I build modern, responsive and user-friendly websites
+                for businesses and individuals.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="hero-btn primary-btn">View My Work</a>
+                <a href="#contact" class="hero-btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am learning web development and building modern websites
+            using HTML, CSS and JavaScript.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="projects-container">
+
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        A personal portfolio website built using HTML, CSS and JavaScript.
+                    </p>
+                    <a href="Projects/project1.html">
+                        <button>View Project</button>
+                    </a>                </div>
+
+                <div class="project-card">
+                    <h3>Restaurant Website</h3>
+                    <p>
+                        A modern website for a restaurant with menu and contact sections.
+                    </p>
+                    <a href="Projects/restaurant.html" class="hero-btn primary-btn">
+                        View Project
+                    </a>                </div>
+
+                <div class="project-card">
+                    <h3>Business Landing Page</h3>
+                    <p>
+                        A professional landing page designed for a small business.
+                    </p>
+                    <button>View Project</button>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: eslamelqsas149@gmail.com</p>
+        <p>Phone: 01015289128</p>
+
+        <button onclick="showContactOptions()">Contact Me</button>
+
+        <div id="contactOptions" style="display: none; margin-top: 20px;">
+            <a href="mailto:eslamelqsas149@gmail.com">
+                <button>Email Me</button>
+            </a>
+
+            <a href="https://wa.me/201015289128" target="_blank">
+                <button>WhatsApp Me</button>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        function showContactOptions() {
+            var options = document.getElementById("contactOptions");
+
+            if (options.style.display === "none") {
+                options.style.display = "block";
+            } else {
+                options.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
