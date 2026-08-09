@@ -17,34 +17,29 @@
             scroll-behavior: smooth;
         }
 
-        html {
-            background: #030712;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #030712;
-            color: #f8fafc;
+            background: #080808;
+            color: #f5f5f5;
         }
-
 
         /* =========================
            Navigation
         ========================= */
 
         nav {
-            background: #020617;
+            background: #0b0b0b;
             padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #172554;
+            border-bottom: 1px solid #2a0d0d;
         }
 
         nav a {
-            color: #f8fafc;
+            color: #f5f5f5;
             margin: 20px;
             text-decoration: none;
             font-size: 18px;
@@ -53,7 +48,7 @@
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: #e53935;
         }
 
 
@@ -62,29 +57,34 @@
         ========================= */
 
         header {
-            background: #2b0b0b;
+            background: #180707;
             color: white;
             text-align: center;
-            padding: 100px 20px;
-            border-bottom: 1px solid #7f1d1d;
+            padding: 110px 20px;
+            border-bottom: 1px solid #3a1111;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
         }
 
         .hero-small {
-            color: #60a5fa;
+            color: #e53935;
             font-size: 18px;
             font-weight: bold;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
         }
 
         header h1 {
-            font-size: 55px;
+            font-size: 60px;
             margin: 10px 0 15px;
-            color: #f8fafc;
         }
 
         header h2 {
             font-size: 30px;
-            color: #60a5fa;
+            color: #e53935;
             margin: 10px 0;
         }
 
@@ -92,8 +92,8 @@
             max-width: 700px;
             margin: 20px auto;
             font-size: 20px;
-            line-height: 1.6;
-            color: #e2e8f0;
+            line-height: 1.7;
+            color: #d1d1d1;
         }
 
 
@@ -107,7 +107,7 @@
 
         .hero-btn {
             display: inline-block;
-            padding: 13px 25px;
+            padding: 13px 27px;
             margin: 8px;
             border-radius: 8px;
             text-decoration: none;
@@ -116,30 +116,29 @@
         }
 
         .primary-btn {
-            background: #2563eb;
+            background: #c62828;
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 5px 15px rgba(198, 40, 40, 0.25);
         }
 
         .primary-btn:hover {
-            background: #3b82f6;
+            background: #e53935;
             transform: translateY(-2px);
         }
 
         .secondary-btn {
-            border: 2px solid #2563eb;
-            color: #60a5fa;
-            background: transparent;
+            border: 2px solid #c62828;
+            color: #ff6b6b;
         }
 
         .secondary-btn:hover {
-            background: #2563eb;
+            background: #c62828;
             color: white;
             transform: translateY(-2px);
         }
 
         button {
-            background: #2563eb;
+            background: #c62828;
             color: white;
             border: none;
             padding: 12px 22px;
@@ -148,11 +147,10 @@
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
-            font-weight: bold;
         }
 
         button:hover {
-            background: #3b82f6;
+            background: #e53935;
             transform: translateY(-2px);
         }
 
@@ -162,25 +160,25 @@
         ========================= */
 
         section {
-            background: #0b1220;
+            background: #111111;
             max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
+            margin: 45px auto;
+            padding: 45px 40px;
             border-radius: 15px;
-            border: 1px solid #172554;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
+            border: 1px solid #292929;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
         }
 
         section h2 {
             text-align: center;
             font-size: 32px;
-            color: #f8fafc;
+            color: #ffffff;
             margin-bottom: 25px;
         }
 
         section p {
             line-height: 1.7;
-            color: #cbd5e1;
+            color: #d0d0d0;
         }
 
 
@@ -192,7 +190,6 @@
             text-align: center;
             max-width: 750px;
             margin: auto;
-            font-size: 17px;
         }
 
 
@@ -205,15 +202,15 @@
         }
 
         .skills-container button {
-            background: #172554;
-            color: #bfdbfe;
-            border: 1px solid #2563eb;
-            margin: 5px;
+            background: #1b1b1b;
+            border: 1px solid #3a3a3a;
+            color: #f5f5f5;
+            margin: 6px;
         }
 
         .skills-container button:hover {
-            background: #2563eb;
-            color: white;
+            background: #c62828;
+            border-color: #c62828;
         }
 
 
@@ -229,9 +226,9 @@
 
         .project-card {
             padding: 25px;
-            background: #111827;
+            background: #171717;
             border-radius: 12px;
-            border: 1px solid #1e3a8a;
+            border: 1px solid #303030;
 
             display: flex;
             flex-direction: column;
@@ -241,24 +238,27 @@
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            border-color: #2563eb;
+            border-color: #7f1d1d;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
         }
 
         .project-card h3 {
-            color: #60a5fa;
+            color: #e53935;
             font-size: 22px;
             margin-top: 0;
         }
 
         .project-card p {
             flex-grow: 1;
-            color: #cbd5e1;
-            line-height: 1.6;
+            color: #cfcfcf;
         }
 
         .project-card a {
             text-decoration: none;
+        }
+
+        .project-card button {
+            margin-top: 15px;
         }
 
 
@@ -272,7 +272,7 @@
 
         #contact p {
             font-size: 18px;
-            color: #cbd5e1;
+            color: #d0d0d0;
         }
 
         #contactOptions {
@@ -285,17 +285,22 @@
         ========================= */
 
         footer {
-            background: #020617;
+            background: #0b0b0b;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            border-top: 1px solid #172554;
+            padding: 35px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #2a0d0d;
+        }
+
+        footer strong {
+            color: #e53935;
+            font-size: 22px;
         }
 
         footer p {
-            margin: 8px;
-            color: #94a3b8;
+            color: #a8a8a8;
+            margin: 10px;
         }
 
 
@@ -315,15 +320,15 @@
             }
 
             header {
-                padding: 70px 20px;
+                padding: 75px 20px;
             }
 
             header h1 {
-                font-size: 40px;
+                font-size: 42px;
             }
 
             header h2 {
-                font-size: 24px;
+                font-size: 25px;
             }
 
             .hero-description {
@@ -332,7 +337,7 @@
 
             section {
                 margin: 25px 15px;
-                padding: 25px 20px;
+                padding: 30px 20px;
             }
 
             .projects-container {
@@ -624,7 +629,7 @@
 
 
         <div id="contactOptions"
-             style="display: none;">
+             style="display:none;">
 
 
             <a href="mailto:eslamelqsas149@gmail.com">
