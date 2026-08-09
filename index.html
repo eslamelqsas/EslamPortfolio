@@ -1,711 +1,727 @@
-<!DOCTYPE html>
-<html lang="en">
+```html
+<meta charset="UTF-8">
 
-<head>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Eslam ElQsas | Portfolio</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<style>
 
-    <title>Eslam ElQsas | Portfolio</title>
+    * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
 
-    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #080808;
+        color: #f5f5f5;
+    }
 
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    /* =========================
+       Navigation
+    ========================= */
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #080808;
-            color: #f5f5f5;
-        }
+    nav {
+        background: #0b0b0b;
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #2a0d0d;
+    }
 
-        /* =========================
-           Navigation
-        ========================= */
+    nav a {
+        color: #f5f5f5;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #e53935;
+    }
+
+
+    /* =========================
+       Hero
+    ========================= */
+
+    header {
+        background: #180707;
+        color: white;
+        text-align: center;
+        padding: 110px 20px;
+        border-bottom: 1px solid #3a1111;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .hero-small {
+        color: #e53935;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 60px;
+        margin: 10px 0 15px;
+    }
+
+    header h2 {
+        font-size: 30px;
+        color: #e53935;
+        margin: 10px 0;
+    }
+
+    .hero-description {
+        max-width: 700px;
+        margin: 20px auto;
+        font-size: 20px;
+        line-height: 1.7;
+        color: #d1d1d1;
+    }
+
+
+    /* =========================
+       Buttons
+    ========================= */
+
+    .hero-buttons {
+        margin-top: 30px;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 13px 27px;
+        margin: 8px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .primary-btn {
+        background: #c62828;
+        color: white;
+        box-shadow: 0 5px 15px rgba(198, 40, 40, 0.25);
+    }
+
+    .primary-btn:hover {
+        background: #e53935;
+        transform: translateY(-2px);
+    }
+
+    .secondary-btn {
+        border: 2px solid #c62828;
+        color: #ff6b6b;
+    }
+
+    .secondary-btn:hover {
+        background: #c62828;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    button {
+        background: #c62828;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        margin-top: 10px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e53935;
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       Sections
+    ========================= */
+
+    section {
+        background: #111111;
+        max-width: 1000px;
+        margin: 45px auto;
+        padding: 45px 40px;
+        border-radius: 15px;
+        border: 1px solid #292929;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    }
+
+    section h2 {
+        text-align: center;
+        font-size: 32px;
+        color: #ffffff;
+        margin-bottom: 25px;
+    }
+
+    section p {
+        line-height: 1.7;
+        color: #d0d0d0;
+    }
+
+
+    /* =========================
+       About
+    ========================= */
+
+    #about p {
+        text-align: center;
+        max-width: 750px;
+        margin: auto;
+    }
+
+
+    /* =========================
+       Skills
+    ========================= */
+
+    .skills-container {
+        text-align: center;
+    }
+
+    .skills-container button {
+        background: #1b1b1b;
+        border: 1px solid #3a3a3a;
+        color: #f5f5f5;
+        margin: 6px;
+    }
+
+    .skills-container button:hover {
+        background: #c62828;
+        border-color: #c62828;
+    }
+
+
+    /* =========================
+       Projects
+    ========================= */
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 25px;
+        background: #171717;
+        border-radius: 12px;
+        border: 1px solid #303030;
+
+        display: flex;
+        flex-direction: column;
+
+        transition: 0.3s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border-color: #7f1d1d;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-card h3 {
+        color: #e53935;
+        font-size: 22px;
+        margin-top: 0;
+    }
+
+    .project-card p {
+        flex-grow: 1;
+        color: #cfcfcf;
+    }
+
+    .project-card a {
+        text-decoration: none;
+    }
+
+    .project-card button {
+        margin-top: 15px;
+    }
+
+
+    /* =========================
+       Contact
+    ========================= */
+
+    #contact {
+        text-align: center;
+    }
+
+    #contact p {
+        font-size: 18px;
+        color: #d0d0d0;
+    }
+
+    #contactOptions {
+        margin-top: 20px;
+    }
+
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+        background: #0b0b0b;
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+        margin-top: 50px;
+        border-top: 1px solid #2a0d0d;
+    }
+
+    footer strong {
+        color: #e53935;
+        font-size: 22px;
+    }
+
+    footer p {
+        color: #a8a8a8;
+        margin: 10px;
+    }
+
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 800px) {
 
         nav {
-            background: #0b0b0b;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #2a0d0d;
+            padding: 15px 5px;
         }
 
         nav a {
-            color: #f5f5f5;
-            margin: 20px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
+            margin: 7px;
+            font-size: 14px;
         }
-
-        nav a:hover {
-            color: #e53935;
-        }
-
-
-        /* =========================
-           Hero
-        ========================= */
 
         header {
-            background: #180707;
-            color: white;
-            text-align: center;
-            padding: 110px 20px;
-            border-bottom: 1px solid #3a1111;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .hero-small {
-            color: #e53935;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
+            padding: 75px 20px;
         }
 
         header h1 {
-            font-size: 60px;
-            margin: 10px 0 15px;
+            font-size: 42px;
         }
 
         header h2 {
-            font-size: 30px;
-            color: #e53935;
-            margin: 10px 0;
+            font-size: 25px;
         }
 
         .hero-description {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 20px;
-            line-height: 1.7;
-            color: #d1d1d1;
+            font-size: 17px;
         }
-
-
-        /* =========================
-           Buttons
-        ========================= */
-
-        .hero-buttons {
-            margin-top: 30px;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            padding: 13px 27px;
-            margin: 8px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .primary-btn {
-            background: #c62828;
-            color: white;
-            box-shadow: 0 5px 15px rgba(198, 40, 40, 0.25);
-        }
-
-        .primary-btn:hover {
-            background: #e53935;
-            transform: translateY(-2px);
-        }
-
-        .secondary-btn {
-            border: 2px solid #c62828;
-            color: #ff6b6b;
-        }
-
-        .secondary-btn:hover {
-            background: #c62828;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        button {
-            background: #c62828;
-            color: white;
-            border: none;
-            padding: 12px 22px;
-            margin-top: 10px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #e53935;
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           Sections
-        ========================= */
 
         section {
-            background: #111111;
-            max-width: 1000px;
-            margin: 45px auto;
-            padding: 45px 40px;
-            border-radius: 15px;
-            border: 1px solid #292929;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+            margin: 25px 15px;
+            padding: 30px 20px;
         }
-
-        section h2 {
-            text-align: center;
-            font-size: 32px;
-            color: #ffffff;
-            margin-bottom: 25px;
-        }
-
-        section p {
-            line-height: 1.7;
-            color: #d0d0d0;
-        }
-
-
-        /* =========================
-           About
-        ========================= */
-
-        #about p {
-            text-align: center;
-            max-width: 750px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           Skills
-        ========================= */
-
-        .skills-container {
-            text-align: center;
-        }
-
-        .skills-container button {
-            background: #1b1b1b;
-            border: 1px solid #3a3a3a;
-            color: #f5f5f5;
-            margin: 6px;
-        }
-
-        .skills-container button:hover {
-            background: #c62828;
-            border-color: #c62828;
-        }
-
-
-        /* =========================
-           Projects
-        ========================= */
 
         .projects-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr;
         }
 
-        .project-card {
-            padding: 25px;
-            background: #171717;
-            border-radius: 12px;
-            border: 1px solid #303030;
-
-            display: flex;
-            flex-direction: column;
-
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: #7f1d1d;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-        }
-
-        .project-card h3 {
-            color: #e53935;
-            font-size: 22px;
-            margin-top: 0;
-        }
-
-        .project-card p {
-            flex-grow: 1;
-            color: #cfcfcf;
-        }
+    }
 
-        .project-card a {
-            text-decoration: none;
-        }
+</style>
 
-        .project-card button {
-            margin-top: 15px;
-        }
 
+<!-- =========================
+     Navigation
+========================= -->
 
-        /* =========================
-           Contact
-        ========================= */
+<nav>
 
-        #contact {
-            text-align: center;
-        }
+    <a href="#home">
+        Home
+    </a>
 
-        #contact p {
-            font-size: 18px;
-            color: #d0d0d0;
-        }
+    <a href="#about">
+        About Me
+    </a>
 
-        #contactOptions {
-            margin-top: 20px;
-        }
+    <a href="#skills">
+        Skills
+    </a>
 
+    <a href="#projects">
+        Projects
+    </a>
 
-        /* =========================
-           Footer
-        ========================= */
+    <a href="#contact">
+        Contact
+    </a>
 
-        footer {
-            background: #0b0b0b;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
-            border-top: 1px solid #2a0d0d;
-        }
+</nav>
 
-        footer strong {
-            color: #e53935;
-            font-size: 22px;
-        }
 
-        footer p {
-            color: #a8a8a8;
-            margin: 10px;
-        }
+<!-- =========================
+     Home
+========================= -->
 
+<header id="home">
 
-        /* =========================
-           Mobile
-        ========================= */
+    <div class="hero-content">
 
-        @media (max-width: 800px) {
+        <p class="hero-small">
+            HELLO, I'M
+        </p>
 
-            nav {
-                padding: 15px 5px;
-            }
-
-            nav a {
-                margin: 7px;
-                font-size: 14px;
-            }
-
-            header {
-                padding: 75px 20px;
-            }
-
-            header h1 {
-                font-size: 42px;
-            }
-
-            header h2 {
-                font-size: 25px;
-            }
-
-            .hero-description {
-                font-size: 17px;
-            }
-
-            section {
-                margin: 25px 15px;
-                padding: 30px 20px;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-    <!-- =========================
-         Navigation
-    ========================= -->
-
-    <nav>
-
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#about">
-            About Me
-        </a>
-
-        <a href="#skills">
-            Skills
-        </a>
-
-        <a href="#projects">
-            Projects
-        </a>
-
-        <a href="#contact">
-            Contact
-        </a>
-
-    </nav>
-
-
-    <!-- =========================
-         Home
-    ========================= -->
-
-    <header id="home">
-
-        <div class="hero-content">
-
-            <p class="hero-small">
-                HELLO, I'M
-            </p>
-
-            <h1>
-                Eslam ElQsas
-            </h1>
-
-            <h2>
-                Web Developer
-            </h2>
-
-            <p class="hero-description">
-
-                I build modern, responsive and user-friendly websites
-                for businesses and individuals.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#projects"
-                   class="hero-btn primary-btn">
-
-                    View My Work
-
-                </a>
-
-
-                <a href="#contact"
-                   class="hero-btn secondary-btn">
-
-                    Contact Me
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         About
-    ========================= -->
-
-    <section id="about">
+        <h1>
+            Eslam ElQsas
+        </h1>
 
         <h2>
-            About Me
+            Web Developer
         </h2>
 
-        <p>
+        <p class="hero-description">
 
-            I am a Web Developer building modern, responsive and
-            user-friendly websites using HTML, CSS and JavaScript.
-            I also develop applications using ASP.NET Core and C#.
+            I build modern, responsive and user-friendly websites
+            for businesses and individuals.
 
         </p>
 
-    </section>
 
+        <div class="hero-buttons">
 
-    <!-- =========================
-         Skills
-    ========================= -->
+            <a href="#projects"
+               class="hero-btn primary-btn">
 
-    <section id="skills">
-
-        <h2>
-            My Skills
-        </h2>
-
-        <div class="skills-container">
-
-            <button>
-                HTML
-            </button>
-
-            <button>
-                CSS
-            </button>
-
-            <button>
-                JavaScript
-            </button>
-
-            <button>
-                C#
-            </button>
-
-            <button>
-                ASP.NET Core
-            </button>
-
-            <button>
-                SQL
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         Projects
-    ========================= -->
-
-    <section id="projects">
-
-        <h2>
-            My Projects
-        </h2>
-
-
-        <div class="projects-container">
-
-
-            <!-- Restaurant -->
-
-            <div class="project-card">
-
-                <h3>
-                    Restaurant Website
-                </h3>
-
-                <p>
-
-                    A modern restaurant website featuring
-                    a menu, contact section and responsive design.
-
-                </p>
-
-                <a href="Projects/restaurant.html">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- JobFinder -->
-
-            <div class="project-card">
-
-                <h3>
-                    JobFinder
-                </h3>
-
-                <p>
-
-                    A job search platform developed using
-                    ASP.NET Core MVC and C#.
-
-                    The project includes user registration,
-                    login, job applications, CV upload
-                    and application tracking.
-
-                </p>
-
-                <a href="Projects/JobFinder.html">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- Renato Bakery -->
-
-            <div class="project-card">
-
-                <h3>
-                    Renato Bakery
-                </h3>
-
-                <p>
-
-                    A modern bakery website featuring
-                    a food menu, product prices,
-                    responsive design and
-                    WhatsApp ordering integration.
-
-                </p>
-
-                <a href="https://eslamelqsas.github.io/Renato-Bakery/"
-                   target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         Contact
-    ========================= -->
-
-    <section id="contact">
-
-        <h2>
-            Contact Me
-        </h2>
-
-
-        <p>
-            Email: eslamelqsas149@gmail.com
-        </p>
-
-        <p>
-            Phone: 01015289128
-        </p>
-
-
-        <button onclick="showContactOptions()">
-
-            Contact Me
-
-        </button>
-
-
-        <div id="contactOptions"
-             style="display:none;">
-
-
-            <a href="mailto:eslamelqsas149@gmail.com">
-
-                <button>
-                    Email Me
-                </button>
+                View My Work
 
             </a>
 
 
-            <a href="https://wa.me/201015289128"
+            <a href="#contact"
+               class="hero-btn secondary-btn">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     About
+========================= -->
+
+<section id="about">
+
+    <h2>
+        About Me
+    </h2>
+
+    <p>
+
+        I am a Web Developer building modern, responsive and
+        user-friendly websites using HTML, CSS and JavaScript.
+        I also develop applications using ASP.NET Core and C#.
+
+    </p>
+
+</section>
+
+
+<!-- =========================
+     Skills
+========================= -->
+
+<section id="skills">
+
+    <h2>
+        My Skills
+    </h2>
+
+    <div class="skills-container">
+
+        <button>
+            HTML
+        </button>
+
+        <button>
+            CSS
+        </button>
+
+        <button>
+            JavaScript
+        </button>
+
+        <button>
+            C#
+        </button>
+
+        <button>
+            ASP.NET Core
+        </button>
+
+        <button>
+            SQL
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Projects
+========================= -->
+
+<section id="projects">
+
+    <h2>
+        My Projects
+    </h2>
+
+
+    <div class="projects-container">
+
+
+        <!-- Restaurant -->
+
+        <div class="project-card">
+
+            <h3>
+                Restaurant Website
+            </h3>
+
+            <p>
+
+                A modern restaurant website featuring
+                a menu, contact section and responsive design.
+
+            </p>
+
+            <a href="Projects/restaurant.html">
+
+                <button>
+                    View Project
+                </button>
+
+            </a>
+
+        </div>
+
+
+        <!-- JobFinder -->
+
+        <div class="project-card">
+
+            <h3>
+                JobFinder
+            </h3>
+
+            <p>
+
+                A job search platform developed using
+                ASP.NET Core MVC and C#.
+
+                The project includes user registration,
+                login, job applications, CV upload
+                and application tracking.
+
+            </p>
+
+            <a href="Projects/JobFinder.html">
+
+                <button>
+                    View Project
+                </button>
+
+            </a>
+
+        </div>
+
+
+        <!-- Renato Bakery -->
+
+        <div class="project-card">
+
+            <h3>
+                Renato Bakery
+            </h3>
+
+            <p>
+
+                A modern bakery website featuring
+                a food menu, product prices,
+                responsive design and
+                WhatsApp ordering integration.
+
+            </p>
+
+            <a href="https://eslamelqsas.github.io/Renato-Bakery/"
                target="_blank">
 
                 <button>
-                    WhatsApp Me
+                    View Project
                 </button>
 
             </a>
 
+        </div>
+
+
+        <!-- Mooca Zone Cafe -->
+
+        <div class="project-card">
+
+            <h3>
+                Mooca Zone Cafe
+            </h3>
+
+            <p>
+
+                A modern cafe website featuring
+                a stylish menu, product categories,
+                responsive design and a modern
+                user-friendly interface.
+
+            </p>
+
+            <a href="https://eslamelqsas.github.io/Mooca-Zone-Cafe/"
+               target="_blank">
+
+                <button>
+                    View Project
+                </button>
+
+            </a>
 
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         Footer
-    ========================= -->
+<!-- =========================
+     Contact
+========================= -->
 
-    <footer>
+<section id="contact">
 
-        <strong>
-            Eslam ElQsas
-        </strong>
-
-        <p>
-            Web Developer | HTML | CSS | JavaScript | C# | ASP.NET Core
-        </p>
-
-        <p>
-            © 2026 Eslam ElQsas. All Rights Reserved.
-        </p>
-
-    </footer>
+    <h2>
+        Contact Me
+    </h2>
 
 
-    <!-- =========================
-         JavaScript
-    ========================= -->
+    <p>
+        Email: eslamelqsas149@gmail.com
+    </p>
 
-    <script>
-
-        function showContactOptions() {
-
-            var options =
-                document.getElementById("contactOptions");
+    <p>
+        Phone: 01015289128
+    </p>
 
 
-            if (options.style.display === "none") {
+    <button onclick="showContactOptions()">
 
-                options.style.display = "block";
+        Contact Me
 
-            }
+    </button>
 
-            else {
 
-                options.style.display = "none";
+    <div id="contactOptions"
+         style="display:none;">
 
-            }
+
+        <a href="mailto:eslamelqsas149@gmail.com">
+
+            <button>
+                Email Me
+            </button>
+
+        </a>
+
+
+        <a href="https://wa.me/201015289128"
+           target="_blank">
+
+            <button>
+                WhatsApp Me
+            </button>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer>
+
+    <strong>
+        Eslam ElQsas
+    </strong>
+
+    <p>
+        Web Developer | HTML | CSS | JavaScript | C# | ASP.NET Core
+    </p>
+
+    <p>
+        © 2026 Eslam ElQsas. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     JavaScript
+========================= -->
+
+<script>
+
+    function showContactOptions() {
+
+        var options =
+            document.getElementById("contactOptions");
+
+
+        if (options.style.display === "none") {
+
+            options.style.display = "block";
 
         }
 
-    </script>
+        else {
 
+            options.style.display = "none";
 
-</body>
+        }
 
-</html>
+    }
+
+</script>
+```
