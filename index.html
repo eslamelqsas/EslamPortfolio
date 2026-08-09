@@ -17,36 +17,43 @@
             scroll-behavior: smooth;
         }
 
+        html {
+            background: #030712;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
+            background: #030712;
+            color: #f8fafc;
         }
+
 
         /* =========================
            Navigation
         ========================= */
 
         nav {
-            background: #111827;
+            background: #020617;
             padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #172554;
         }
 
         nav a {
-            color: white;
+            color: #f8fafc;
             margin: 20px;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #38bdf8;
+            color: #60a5fa;
         }
 
 
@@ -55,14 +62,15 @@
         ========================= */
 
         header {
-            background: #0f172a;
+            background: #020617;
             color: white;
             text-align: center;
             padding: 100px 20px;
+            border-bottom: 1px solid #172554;
         }
 
         .hero-small {
-            color: #38bdf8;
+            color: #60a5fa;
             font-size: 18px;
             font-weight: bold;
             letter-spacing: 3px;
@@ -71,11 +79,12 @@
         header h1 {
             font-size: 55px;
             margin: 10px 0 15px;
+            color: #f8fafc;
         }
 
         header h2 {
             font-size: 30px;
-            color: #38bdf8;
+            color: #60a5fa;
             margin: 10px 0;
         }
 
@@ -109,21 +118,24 @@
         .primary-btn {
             background: #2563eb;
             color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
         }
 
         .primary-btn:hover {
-            background: #1d4ed8;
+            background: #3b82f6;
             transform: translateY(-2px);
         }
 
         .secondary-btn {
-            border: 2px solid #38bdf8;
-            color: #38bdf8;
+            border: 2px solid #2563eb;
+            color: #60a5fa;
+            background: transparent;
         }
 
         .secondary-btn:hover {
-            background: #38bdf8;
-            color: #0f172a;
+            background: #2563eb;
+            color: white;
+            transform: translateY(-2px);
         }
 
         button {
@@ -136,10 +148,11 @@
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
+            font-weight: bold;
         }
 
         button:hover {
-            background: #1d4ed8;
+            background: #3b82f6;
             transform: translateY(-2px);
         }
 
@@ -149,23 +162,25 @@
         ========================= */
 
         section {
-            background: white;
+            background: #0b1220;
             max-width: 1000px;
             margin: 40px auto;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid #172554;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
         }
 
         section h2 {
             text-align: center;
             font-size: 32px;
-            color: #111827;
+            color: #f8fafc;
             margin-bottom: 25px;
         }
 
         section p {
             line-height: 1.7;
+            color: #cbd5e1;
         }
 
 
@@ -177,6 +192,7 @@
             text-align: center;
             max-width: 750px;
             margin: auto;
+            font-size: 17px;
         }
 
 
@@ -186,6 +202,18 @@
 
         .skills-container {
             text-align: center;
+        }
+
+        .skills-container button {
+            background: #172554;
+            color: #bfdbfe;
+            border: 1px solid #2563eb;
+            margin: 5px;
+        }
+
+        .skills-container button:hover {
+            background: #2563eb;
+            color: white;
         }
 
 
@@ -201,9 +229,9 @@
 
         .project-card {
             padding: 25px;
-            background: #f8fafc;
+            background: #111827;
             border-radius: 12px;
-            border: 1px solid #e5e7eb;
+            border: 1px solid #1e3a8a;
 
             display: flex;
             flex-direction: column;
@@ -213,17 +241,20 @@
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-color: #2563eb;
         }
 
         .project-card h3 {
-            color: #2563eb;
+            color: #60a5fa;
             font-size: 22px;
             margin-top: 0;
         }
 
         .project-card p {
             flex-grow: 1;
+            color: #cbd5e1;
+            line-height: 1.6;
         }
 
         .project-card a {
@@ -241,6 +272,7 @@
 
         #contact p {
             font-size: 18px;
+            color: #cbd5e1;
         }
 
         #contactOptions {
@@ -253,15 +285,17 @@
         ========================= */
 
         footer {
-            background: #111827;
+            background: #020617;
             color: white;
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
+            border-top: 1px solid #172554;
         }
 
         footer p {
             margin: 8px;
+            color: #94a3b8;
         }
 
 
@@ -408,9 +442,9 @@
 
         <p>
 
-           I am a Web Developer building modern, responsive and
-        user-friendly websites using HTML, CSS and JavaScript.
-        I also develop applications using ASP.NET Core and C#.
+            I am a Web Developer building modern, responsive and
+            user-friendly websites using HTML, CSS and JavaScript.
+            I also develop applications using ASP.NET Core and C#.
 
         </p>
 
@@ -472,9 +506,7 @@
         <div class="projects-container">
 
 
-            <!-- =====================
-                 Restaurant
-            ====================== -->
+            <!-- Restaurant -->
 
             <div class="project-card">
 
@@ -500,9 +532,7 @@
             </div>
 
 
-            <!-- =====================
-                 JobFinder
-            ====================== -->
+            <!-- JobFinder -->
 
             <div class="project-card">
 
@@ -532,9 +562,7 @@
             </div>
 
 
-            <!-- =====================
-                 Renato Bakery
-            ====================== -->
+            <!-- Renato Bakery -->
 
             <div class="project-card">
 
@@ -596,7 +624,7 @@
 
 
         <div id="contactOptions"
-             style="display:none;">
+             style="display: none;">
 
 
             <a href="mailto:eslamelqsas149@gmail.com">
