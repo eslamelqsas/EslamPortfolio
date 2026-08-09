@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JobFinder | Eslam ElQsas</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        nav {
+            background: #0f172a;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 0 0 15px;
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .feature h3 {
+            color: #2563eb;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech span {
+            background: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .job-card {
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            background: #f8fafc;
+        }
+
+        .job-card h3 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .company {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .job-info {
+            color: #64748b;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .back-btn {
+            background: #0f172a;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="../index.html">
+            Portfolio
+        </a>
+
+        <a href="#features">
+            Features
+        </a>
+
+        <a href="#technology">
+            Technology
+        </a>
+
+        <a href="#jobs">
+            Jobs
+        </a>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <div class="hero">
+
+        <h1>
+            JobFinder
+        </h1>
+
+        <p>
+            A modern job search platform built with
+            ASP.NET Core MVC, allowing users to discover
+            job opportunities and submit applications online.
+        </p>
+
+        <a href="../index.html"
+           class="btn back-btn">
+
+            ← Back to Portfolio
+
+        </a>
+
+    </div>
+
+
+    <div class="container">
+
+
+        <!-- About Project -->
+
+        <div class="section">
+
+            <h2>
+                About The Project
+            </h2>
+
+            <p>
+                JobFinder is a job search web application developed
+                as a practical ASP.NET Core MVC project.
+            </p>
+
+            <p>
+                The platform allows users to create accounts,
+                log in securely, browse available jobs,
+                apply for jobs and track their submitted applications.
+            </p>
+
+        </div>
+
+
+        <!-- Features -->
+
+        <div class="section"
+             id="features">
+
+            <h2>
+                Main Features
+            </h2>
+
+            <div class="features">
+
+
+                <div class="feature">
+
+                    <h3>
+                        User Registration
+                    </h3>
+
+                    <p>
+                        Users can create a new account using
+                        their name, email and password.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        Secure Login
+                    </h3>
+
+                    <p>
+                        Users can log in and maintain their
+                        session while using the platform.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        Job Search
+                    </h3>
+
+                    <p>
+                        Users can browse jobs by title,
+                        category and other job information.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        Apply For Jobs
+                    </h3>
+
+                    <p>
+                        Registered users can submit applications
+                        with their personal information and cover letter.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        CV Upload
+                    </h3>
+
+                    <p>
+                        Applicants can upload their CV in
+                        PDF, DOC or DOCX format.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>
+                        Application Tracking
+                    </h3>
+
+                    <p>
+                        Users can view their previous applications
+                        and track submitted job applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Technology -->
+
+        <div class="section"
+             id="technology">
+
+            <h2>
+                Technologies Used
+            </h2>
+
+            <div class="tech">
+
+                <span>
+                    C#
+                </span>
+
+                <span>
+                    ASP.NET Core MVC
+                </span>
+
+                <span>
+                    Entity Framework Core
+                </span>
+
+                <span>
+                    SQLite
+                </span>
+
+                <span>
+                    HTML
+                </span>
+
+                <span>
+                    CSS
+                </span>
+
+                <span>
+                    JavaScript
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sample Jobs -->
+
+        <div class="section"
+             id="jobs">
+
+            <h2>
+                Featured Jobs
+            </h2>
+
+
+            <div class="job-card">
+
+                <h3>
+                    Frontend Developer
+                </h3>
+
+                <div class="company">
+                    Google
+                </div>
+
+                <div class="job-info">
+                    📍 Remote &nbsp; | &nbsp;
+                    💰 $3,500 - $5,000 &nbsp; | &nbsp;
+                    Full Time
+                </div>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>
+                    Software Engineer
+                </h3>
+
+                <div class="company">
+                    Microsoft
+                </div>
+
+                <div class="job-info">
+                    📍 New York &nbsp; | &nbsp;
+                    💰 $4,000 - $6,500 &nbsp; | &nbsp;
+                    Full Time
+                </div>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>
+                    UI/UX Designer
+                </h3>
+
+                <div class="company">
+                    Adobe
+                </div>
+
+                <div class="job-info">
+                    📍 Remote &nbsp; | &nbsp;
+                    💰 $3,000 - $4,500 &nbsp; | &nbsp;
+                    Full Time
+                </div>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>
+                    Network Engineer
+                </h3>
+
+                <div class="company">
+                    Tech Solutions
+                </div>
+
+                <div class="job-info">
+                    📍 Alexandria &nbsp; | &nbsp;
+                    💰 $2,500 - $4,000 &nbsp; | &nbsp;
+                    Full Time
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Project Status -->
+
+        <div class="section">
+
+            <h2>
+                Project Status
+            </h2>
+
+            <p>
+                JobFinder was developed as a full-stack ASP.NET Core MVC
+                application with database integration and user authentication.
+            </p>
+
+            <p>
+                The project demonstrates practical experience with
+                MVC architecture, Entity Framework Core, database operations,
+                sessions, file uploads and CRUD-style application workflows.
+            </p>
+
+        </div>
+
+
+        <div style="text-align:center;">
+
+            <a href="../index.html"
+               class="btn">
+
+                ← Back To Portfolio
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <strong>
+            Eslam ElQsas
+        </strong>
+
+        <p>
+            JobFinder — ASP.NET Core MVC Project
+        </p>
+
+        <p>
+            © 2026 Eslam ElQsas. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
