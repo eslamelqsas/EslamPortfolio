@@ -3,16 +3,20 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background: #030712;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #030712;
+    background: #030712;
     color: #f8fafc;
 }
 
 /* Navbar */
 nav {
-    background-color: #020617;
+    background: #020617;
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #172554;
@@ -27,12 +31,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #60a5fa;
+    color: #2563eb;
 }
 
 /* Home */
 header {
-    background-color: #020617;
+    background: #020617;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -45,15 +49,15 @@ header h1 {
 
 header p {
     font-size: 24px;
-    color: #60a5fa;
+    color: #2563eb;
 }
 
-/* Sections */
+/* ALL SECTIONS */
 section {
     max-width: 900px;
     margin: 50px auto;
     padding: 45px 30px;
-    background-color: #0b1220;
+    background: #0b1220;
     color: #f8fafc;
     border: 1px solid #172554;
     border-radius: 15px;
@@ -65,9 +69,13 @@ section h2 {
     color: white;
 }
 
+section p {
+    color: #cbd5e1;
+}
+
 /* Buttons */
 button {
-    background-color: #1d4ed8;
+    background: #1d4ed8;
     color: white;
     border: none;
     padding: 12px 22px;
@@ -78,7 +86,7 @@ button {
 }
 
 button:hover {
-    background-color: #2563eb;
+    background: #2563eb;
 }
 
 /* Projects */
@@ -92,7 +100,7 @@ button:hover {
 .project-card {
     flex: 1;
     padding: 25px;
-    background-color: #050b18;
+    background: #050b18;
     color: #f8fafc;
     border-radius: 12px;
     border: 1px solid #172554;
@@ -107,7 +115,7 @@ button:hover {
 }
 
 .project-card h3 {
-    color: #60a5fa;
+    color: #2563eb;
 }
 
 .project-card p {
@@ -187,17 +195,33 @@ button:hover {
 
 /* Skills */
 #skills button {
-    background-color: #1d4ed8;
+    background: #1d4ed8;
     color: white;
 }
 
 #skills button:hover {
-    background-color: #2563eb;
+    background: #2563eb;
 }
 
-/* Links */
-a {
-    transition: 0.3s;
+/* About */
+#about {
+    background: #0b1220;
+    color: #f8fafc;
+}
+
+/* Contact */
+#contact {
+    background: #0b1220;
+    color: #f8fafc;
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    color: #f8fafc;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #172554;
 }
 
 /* Mobile */
