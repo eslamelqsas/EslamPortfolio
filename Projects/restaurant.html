@@ -1,155 +1,425 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>La Tavola | Restaurant</title>
+    <title>La Tavola | Italian Restaurant</title>
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
             scroll-behavior: smooth;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #fff7ed;
-            color: #292524;
+            background: #f8f5ef;
+            color: #29251f;
         }
 
         nav {
-            background: #292524;
-            padding: 20px;
-            text-align: center;
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 1000;
+            background: #183c2b;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-            nav a {
-                color: white;
-                text-decoration: none;
-                margin: 0 18px;
-                font-weight: bold;
-            }
+        .logo {
+            color: #e5b85c;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-                nav a:hover {
-                    color: #fb923c;
-                }
+        nav div a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav div a:hover {
+            color: #e5b85c;
+        }
 
         .hero {
-            min-height: 500px;
-            background: #431407;
-            color: white;
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+                url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
+            color: white;
+            padding: 40px 20px;
         }
 
-            .hero h1 {
-                font-size: 60px;
-                margin-bottom: 15px;
-            }
+        .hero-content {
+            max-width: 800px;
+        }
 
-            .hero p {
-                font-size: 20px;
-                margin-bottom: 30px;
-                color: #fed7aa;
-            }
+        .hero-content small {
+            color: #e5b85c;
+            font-size: 18px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #e5b85c;
+        }
+
+        .hero p {
+            font-size: 21px;
+            line-height: 1.7;
+            color: #f1f1f1;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
 
         .btn {
             display: inline-block;
-            background: #f97316;
-            color: white;
-            text-decoration: none;
             padding: 14px 28px;
+            margin: 7px;
             border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
+            transition: .3s;
         }
 
-            .btn:hover {
-                background: #ea580c;
-            }
+        .primary {
+            background: #e5b85c;
+            color: #183c2b;
+        }
+
+        .primary:hover {
+            background: #f1cc78;
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .secondary:hover {
+            background: white;
+            color: #183c2b;
+        }
 
         section {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 30px 20px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 25px;
         }
 
-            section h2 {
-                text-align: center;
-                font-size: 36px;
-                margin-bottom: 35px;
-            }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
 
-        .menu {
+        .section-title h2 {
+            font-size: 42px;
+            color: #183c2b;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .about-text h2 {
+            color: #183c2b;
+            font-size: 40px;
+        }
+
+        .about-text p {
+            line-height: 1.9;
+            color: #666;
+            font-size: 17px;
+        }
+
+        .about-features {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature strong {
+            display: block;
+            color: #183c2b;
+            font-size: 22px;
+        }
+
+        .feature span {
+            color: #777;
+        }
+
+        #menu {
+            background: #fff;
+            max-width: none;
+        }
+
+        .menu-inner {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .menu-category {
+            margin-bottom: 55px;
+        }
+
+        .category-title {
+            text-align: center;
+            color: #183c2b;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .menu-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 25px;
         }
 
-        .food {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-            .food h3 {
-                margin-bottom: 10px;
-                color: #c2410c;
-            }
-
-            .food p {
-                color: #57534e;
-                line-height: 1.5;
-            }
-
-        .price {
-            display: block;
-            margin-top: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #f97316;
-        }
-
-        .contact {
-            background: #292524;
-            color: white;
+        .food-card {
+            background: #f8f5ef;
             border-radius: 15px;
-            text-align: center;
+            overflow: hidden;
+            border: 1px solid #eee;
+            transition: .3s;
         }
 
-            .contact p {
-                margin: 12px 0;
-            }
+        .food-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.12);
+        }
 
-        footer {
-            background: #1c1917;
-            color: #a8a29e;
-            text-align: center;
+        .food-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-content {
             padding: 20px;
         }
 
-        @media (max-width: 700px) {
-            .menu {
-                grid-template-columns: 1fr;
+        .food-content h3 {
+            margin: 0 0 8px;
+            color: #183c2b;
+            font-size: 21px;
+        }
+
+        .food-content p {
+            color: #777;
+            line-height: 1.6;
+            min-height: 50px;
+        }
+
+        .food-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .price {
+            color: #b07b18;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .order-btn {
+            background: #183c2b;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .order-btn:hover {
+            background: #24583f;
+        }
+
+        .offer {
+            max-width: 1100px;
+            margin: 70px auto;
+            padding: 65px 30px;
+            border-radius: 20px;
+            background:
+                linear-gradient(rgba(24,60,43,.88), rgba(24,60,43,.88)),
+                url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=80");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .offer h2 {
+            color: #e5b85c;
+            font-size: 38px;
+        }
+
+        .offer p {
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .stars {
+            color: #e5b85c;
+            font-size: 22px;
+        }
+
+        .review p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .review strong {
+            color: #183c2b;
+        }
+
+        .contact {
+            background: #183c2b;
+            max-width: none;
+            color: white;
+        }
+
+        .contact-inner {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #e5b85c;
+            font-size: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin: 35px 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .contact-item span {
+            color: #d5d5d5;
+        }
+
+        footer {
+            background: #0d2419;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: #e5b85c;
+            font-size: 22px;
+        }
+
+        footer p {
+            color: #bbb;
+        }
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav div a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 550px;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 45px;
             }
 
-            nav a {
-                margin: 0 7px;
-                font-size: 14px;
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .contact-info {
+                gap: 30px;
             }
         }
     </style>
@@ -158,111 +428,800 @@
 <body>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+
+        <div class="logo">
+            La Tavola
+        </div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+
     </nav>
 
-    <div class="hero" id="home">
-        <div>
-            <h1>La Tavola</h1>
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <small>
+                BENVENUTI A LA TAVOLA
+            </small>
+
+            <h1>
+                Taste Italy,
+                <span>Love Every Bite.</span>
+            </h1>
 
             <p>
-                Authentic flavors. Fresh ingredients. Unforgettable moments.
+                Authentic Italian flavors, freshly prepared
+                with passion and the finest ingredients.
             </p>
 
-            <a href="#menu" class="btn">View Our Menu</a>
-        </div>
-    </div>
+            <div class="hero-buttons">
 
-    <section id="menu">
+                <a href="#menu" class="btn primary">
+                    Explore Our Menu
+                </a>
 
-        <h2>Our Menu</h2>
+                <a href="#contact" class="btn secondary">
+                    Reserve a Table
+                </a>
 
-        <div class="menu">
-
-            <div class="food">
-                <h3>Classic Burger</h3>
-                <p>
-                    Juicy beef burger with fresh vegetables and special sauce.
-                </p>
-                <span class="price">$12</span>
-            </div>
-
-            <div class="food">
-                <h3>Italian Pasta</h3>
-                <p>
-                    Fresh pasta with creamy sauce, herbs and parmesan cheese.
-                </p>
-                <span class="price">$15</span>
-            </div>
-
-            <div class="food">
-                <h3>Margherita Pizza</h3>
-                <p>
-                    Traditional pizza with tomato sauce, mozzarella and basil.
-                </p>
-                <span class="price">$14</span>
-            </div>
-
-            <div class="food">
-                <h3>Grilled Chicken</h3>
-                <p>
-                    Tender grilled chicken served with vegetables and rice.
-                </p>
-                <span class="price">$18</span>
-            </div>
-
-            <div class="food">
-                <h3>Caesar Salad</h3>
-                <p>
-                    Fresh lettuce, parmesan, crispy chicken and Caesar dressing.
-                </p>
-                <span class="price">$10</span>
-            </div>
-
-            <div class="food">
-                <h3>Chocolate Cake</h3>
-                <p>
-                    Rich chocolate cake served with a delicious creamy topping.
-                </p>
-                <span class="price">$8</span>
             </div>
 
         </div>
 
-    </section>
+    </header>
+
 
     <section id="about">
 
-        <h2>About Us</h2>
+        <div class="about">
 
-        <p style="text-align:center; line-height:1.8;">
-            La Tavola is a modern restaurant focused on fresh ingredients,
-            delicious food and a great dining experience.
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80"
+                    alt="La Tavola Restaurant">
+
+            </div>
+
+            <div class="about-text">
+
+                <h2>
+                    A Taste of Italy
+                </h2>
+
+                <p>
+                    Welcome to La Tavola, where traditional Italian
+                    recipes meet a modern dining experience.
+                </p>
+
+                <p>
+                    From handmade pasta and authentic pizza to
+                    delicious desserts, every dish is prepared
+                    with fresh ingredients and genuine passion.
+                </p>
+
+                <div class="about-features">
+
+                    <div class="feature">
+                        <strong>100%</strong>
+                        <span>Fresh Ingredients</span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>10+</strong>
+                        <span>Years of Experience</span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>4.9★</strong>
+                        <span>Customer Rating</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div id="menu">
+
+        <div class="menu-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    Our Menu
+                </h2>
+
+                <p>
+                    Italian classics made fresh for you
+                </p>
+
+            </div>
+
+
+            <div class="menu-category">
+
+                <h3 class="category-title">
+                    Starters
+                </h3>
+
+                <div class="menu-grid">
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=80"
+                            alt="Bruschetta">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Classic Bruschetta
+                            </h3>
+
+                            <p>
+                                Toasted bread with fresh tomatoes,
+                                basil, garlic and olive oil.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 145
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Classic%20Bruschetta"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=800&q=80"
+                            alt="Garlic Bread">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Garlic Bread
+                            </h3>
+
+                            <p>
+                                Warm Italian bread with garlic,
+                                herbs and parmesan.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 110
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Garlic%20Bread"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                            alt="Caprese Salad">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Caprese Salad
+                            </h3>
+
+                            <p>
+                                Fresh mozzarella, tomatoes,
+                                basil and balsamic glaze.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 165
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Caprese%20Salad"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-category">
+
+                <h3 class="category-title">
+                    Pizza
+                </h3>
+
+                <div class="menu-grid">
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+                            alt="Margherita Pizza">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Margherita Pizza
+                            </h3>
+
+                            <p>
+                                Tomato sauce, fresh mozzarella,
+                                basil and extra virgin olive oil.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 210
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Margherita%20Pizza"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+                            alt="Pepperoni Pizza">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Pepperoni Pizza
+                            </h3>
+
+                            <p>
+                                Italian tomato sauce, mozzarella
+                                and spicy pepperoni.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 260
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Pepperoni%20Pizza"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+                            alt="Four Cheese Pizza">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Quattro Formaggi
+                            </h3>
+
+                            <p>
+                                A rich combination of four Italian
+                                cheeses on a crispy crust.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 285
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Quattro%20Formaggi%20Pizza"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-category">
+
+                <h3 class="category-title">
+                    Pasta & Main Courses
+                </h3>
+
+                <div class="menu-grid">
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=800&q=80"
+                            alt="Pasta Alfredo">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Chicken Alfredo
+                            </h3>
+
+                            <p>
+                                Creamy parmesan sauce with pasta,
+                                grilled chicken and herbs.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 295
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Chicken%20Alfredo"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80"
+                            alt="Penne Arrabbiata">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Penne Arrabbiata
+                            </h3>
+
+                            <p>
+                                Penne pasta with spicy tomato sauce,
+                                garlic and fresh basil.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 235
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Penne%20Arrabbiata"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Lasagna">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Classic Lasagna
+                            </h3>
+
+                            <p>
+                                Layers of pasta, beef ragù,
+                                mozzarella and creamy béchamel.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 320
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Classic%20Lasagna"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-category">
+
+                <h3 class="category-title">
+                    Desserts
+                </h3>
+
+                <div class="menu-grid">
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+                            alt="Tiramisu">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Classic Tiramisu
+                            </h3>
+
+                            <p>
+                                Espresso-soaked ladyfingers,
+                                mascarpone cream and cocoa.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 175
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Classic%20Tiramisu"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                            alt="Chocolate Cake">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Chocolate Cake
+                            </h3>
+
+                            <p>
+                                Rich chocolate cake with
+                                smooth chocolate cream.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 160
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Chocolate%20Cake"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=800&q=80"
+                            alt="Gelato">
+
+                        <div class="food-content">
+
+                            <h3>
+                                Italian Gelato
+                            </h3>
+
+                            <p>
+                                Creamy Italian-style gelato
+                                available in different flavors.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <span class="price">
+                                    EGP 130
+                                </span>
+
+                                <a class="order-btn"
+                                   href="https://wa.me/2010152891280?text=I%20would%20like%20to%20order%20Italian%20Gelato"
+                                   target="_blank">
+                                    Order
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="offer">
+
+        <h2>
+            Special Dinner Offer
+        </h2>
+
+        <p>
+            Enjoy a complete Italian dinner for two
+            including two main courses, a starter and
+            two soft drinks.
         </p>
 
-    </section>
+        <h2>
+            EGP 799
+        </h2>
 
-    <section id="contact" class="contact">
-
-        <h2>Contact Us</h2>
-
-        <p>Email: info@latavola.com</p>
-        <p>Phone: +1 234 567 890</p>
-
-        <br>
-
-        <a href="mailto:info@latavola.com" class="btn">
-            Make a Reservation
+        <a href="https://wa.me/2010152891280?text=I%20would%20like%20to%20reserve%20the%20Special%20Dinner%20Offer"
+           target="_blank"
+           class="btn primary">
+            Reserve Now
         </a>
 
+    </div>
+
+
+    <section id="reviews">
+
+        <div class="section-title">
+
+            <h2>
+                What Our Guests Say
+            </h2>
+
+            <p>
+                A few words from our happy customers
+            </p>
+
+        </div>
+
+        <div class="reviews">
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Amazing food and beautiful atmosphere.
+                    The pizza tasted incredibly authentic."
+                </p>
+
+                <strong>
+                    Ahmed M.
+                </strong>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The pasta was fresh and delicious.
+                    Great place for a family dinner."
+                </p>
+
+                <strong>
+                    Sara H.
+                </strong>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Excellent service, delicious desserts
+                    and a very comfortable atmosphere."
+                </p>
+
+                <strong>
+                    Omar K.
+                </strong>
+
+            </div>
+
+        </div>
+
     </section>
 
+
+    <div class="contact" id="contact">
+
+        <div class="contact-inner">
+
+            <h2>
+                Visit La Tavola
+            </h2>
+
+            <p>
+                Come and enjoy a memorable Italian dining experience.
+            </p>
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+
+                    <strong>
+                        📍 Location
+                    </strong>
+
+                    <span>
+                        Alexandria, Egypt
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        📞 Phone
+                    </strong>
+
+                    <span>
+                        010152891280
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        🕐 Opening Hours
+                    </strong>
+
+                    <span>
+                        Every Day: 12 PM - 12 AM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a href="https://wa.me/2010152891280"
+               target="_blank"
+               class="btn primary">
+                Order on WhatsApp
+            </a>
+
+
+            <a href="mailto:latavola@example.com"
+               class="btn secondary">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+
     <footer>
-        © 2026 La Tavola. All Rights Reserved.
+
+        <strong>
+            La Tavola
+        </strong>
+
+        <p>
+            Authentic Italian Taste in Egypt
+        </p>
+
+        <p>
+            © 2026 La Tavola. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
+
 </html>
