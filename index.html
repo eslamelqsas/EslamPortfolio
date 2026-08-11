@@ -23,12 +23,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #020617;
-            color: #f8fafc;
-        }
-
-        a {
-            color: inherit;
+            background: #080808;
+            color: #f5f5f5;
         }
 
         /* =========================
@@ -36,17 +32,17 @@
         ========================= */
 
         nav {
-            background: #020617;
+            background: #0b0b0b;
             padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #172554;
+            border-bottom: 1px solid #2a2a2a;
         }
 
         nav a {
-            color: #e2e8f0;
+            color: #e5e5e5;
             margin: 0 18px;
             text-decoration: none;
             font-size: 17px;
@@ -55,7 +51,7 @@
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: #dc2626;
         }
 
 
@@ -73,13 +69,14 @@
             background:
                 radial-gradient(
                     circle at top,
-                    #172554 0%,
-                    #020617 45%,
-                    #020617 100%
+                    #4a0d0d 0%,
+                    #160606 35%,
+                    #080808 70%,
+                    #080808 100%
                 );
 
             padding: 100px 20px;
-            border-bottom: 1px solid #172554;
+            border-bottom: 1px solid #351010;
         }
 
         .hero-content {
@@ -87,7 +84,7 @@
         }
 
         .hero-small {
-            color: #60a5fa;
+            color: #ef4444;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 4px;
@@ -97,12 +94,12 @@
         header h1 {
             font-size: 65px;
             margin: 10px 0;
-            color: #f8fafc;
+            color: #ffffff;
         }
 
         header h2 {
             font-size: 30px;
-            color: #60a5fa;
+            color: #ef4444;
             margin: 15px 0;
         }
 
@@ -111,8 +108,13 @@
             margin: 25px auto;
             font-size: 20px;
             line-height: 1.7;
-            color: #cbd5e1;
+            color: #bdbdbd;
         }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .hero-buttons {
             margin-top: 35px;
@@ -129,23 +131,23 @@
         }
 
         .primary-btn {
-            background: #2563eb;
+            background: #b91c1c;
             color: white;
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 8px 25px rgba(185, 28, 28, 0.25);
         }
 
         .primary-btn:hover {
-            background: #3b82f6;
+            background: #dc2626;
             transform: translateY(-3px);
         }
 
         .secondary-btn {
-            border: 2px solid #2563eb;
-            color: #60a5fa;
+            border: 2px solid #b91c1c;
+            color: #ef4444;
         }
 
         .secondary-btn:hover {
-            background: #2563eb;
+            background: #b91c1c;
             color: white;
             transform: translateY(-3px);
         }
@@ -160,12 +162,12 @@
             margin: 50px auto;
             padding: 50px 35px;
 
-            background: #0b1220;
-            border: 1px solid #172554;
+            background: #151515;
+            border: 1px solid #2b2b2b;
             border-radius: 18px;
 
             box-shadow:
-                0 10px 40px rgba(0, 0, 0, 0.35);
+                0 10px 40px rgba(0, 0, 0, 0.55);
         }
 
         section h2 {
@@ -173,12 +175,12 @@
             font-size: 34px;
             margin-top: 0;
             margin-bottom: 15px;
-            color: #f8fafc;
+            color: #ffffff;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #94a3b8;
+            color: #929292;
             margin-bottom: 40px;
             font-size: 17px;
         }
@@ -188,12 +190,12 @@
            ABOUT
         ========================= */
 
-        #about p:not(.section-subtitle) {
+        #about p {
             max-width: 800px;
             margin: auto;
             text-align: center;
             line-height: 1.9;
-            color: #cbd5e1;
+            color: #c7c7c7;
             font-size: 18px;
         }
 
@@ -210,8 +212,8 @@
 
         .service-card {
             padding: 30px 25px;
-            background: #050b18;
-            border: 1px solid #172554;
+            background: #0e0e0e;
+            border: 1px solid #2d2d2d;
             border-radius: 14px;
             text-align: center;
             transition: 0.3s;
@@ -219,8 +221,8 @@
 
         .service-card:hover {
             transform: translateY(-7px);
-            border-color: #2563eb;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            border-color: #b91c1c;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
         }
 
         .service-icon {
@@ -229,12 +231,12 @@
         }
 
         .service-card h3 {
-            color: #60a5fa;
+            color: #ef4444;
             margin-bottom: 12px;
         }
 
         .service-card p {
-            color: #94a3b8;
+            color: #999999;
             line-height: 1.6;
         }
 
@@ -252,16 +254,17 @@
 
         .skill {
             padding: 12px 20px;
-            background: #050b18;
-            border: 1px solid #1e3a8a;
+            background: #0e0e0e;
+            border: 1px solid #3a3a3a;
             border-radius: 8px;
-            color: #bfdbfe;
+            color: #d4d4d4;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .skill:hover {
-            background: #1d4ed8;
+            background: #991b1b;
+            border-color: #dc2626;
             color: white;
             transform: translateY(-3px);
         }
@@ -279,8 +282,8 @@
 
         .project-card {
             padding: 28px;
-            background: #050b18;
-            border: 1px solid #172554;
+            background: #0e0e0e;
+            border: 1px solid #2d2d2d;
             border-radius: 14px;
 
             display: flex;
@@ -291,34 +294,33 @@
 
         .project-card:hover {
             transform: translateY(-8px);
-            border-color: #2563eb;
+            border-color: #b91c1c;
 
             box-shadow:
-                0 15px 35px rgba(0,0,0,0.45);
+                0 15px 35px rgba(0,0,0,0.55);
         }
 
         .project-number {
-            color: #3b82f6;
+            color: #ef4444;
             font-size: 14px;
             font-weight: bold;
-            letter-spacing: 1px;
         }
 
         .project-card h3 {
-            color: #f8fafc;
+            color: #ffffff;
             font-size: 23px;
             margin: 12px 0;
         }
 
         .project-card p {
-            color: #94a3b8;
+            color: #999999;
             line-height: 1.7;
             flex-grow: 1;
         }
 
         .project-tech {
             margin: 15px 0;
-            color: #60a5fa;
+            color: #ef4444;
             font-size: 14px;
             font-weight: bold;
         }
@@ -328,10 +330,10 @@
         }
 
         .project-btn {
-            display: block;
+            display: inline-block;
             text-align: center;
             padding: 11px 18px;
-            background: #1d4ed8;
+            background: #991b1b;
             color: white;
             border-radius: 8px;
             font-weight: bold;
@@ -339,7 +341,7 @@
         }
 
         .project-btn:hover {
-            background: #3b82f6;
+            background: #dc2626;
         }
 
 
@@ -356,20 +358,20 @@
         }
 
         .why-item {
-            background: #050b18;
-            border: 1px solid #172554;
+            background: #0e0e0e;
+            border: 1px solid #2d2d2d;
             padding: 18px;
             border-radius: 10px;
-            color: #cbd5e1;
+            color: #c7c7c7;
             transition: 0.3s;
         }
 
         .why-item:hover {
-            border-color: #2563eb;
+            border-color: #b91c1c;
         }
 
         .why-item span {
-            color: #60a5fa;
+            color: #ef4444;
             font-weight: bold;
             margin-right: 8px;
         }
@@ -384,7 +386,7 @@
         }
 
         .contact-text {
-            color: #94a3b8;
+            color: #999999;
             font-size: 18px;
             line-height: 1.7;
             max-width: 650px;
@@ -404,16 +406,16 @@
         ========================= */
 
         footer {
-            background: #020617;
-            border-top: 1px solid #172554;
-            color: #94a3b8;
+            background: #0b0b0b;
+            border-top: 1px solid #2d2d2d;
+            color: #888888;
             text-align: center;
             padding: 35px 20px;
             margin-top: 50px;
         }
 
         footer strong {
-            color: #f8fafc;
+            color: #ffffff;
             font-size: 20px;
         }
 
@@ -488,15 +490,10 @@
     <nav>
 
         <a href="#home">Home</a>
-
         <a href="#about">About Me</a>
-
         <a href="#services">Services</a>
-
         <a href="#skills">Skills</a>
-
         <a href="#projects">Projects</a>
-
         <a href="#contact">Contact</a>
 
     </nav>
@@ -511,7 +508,7 @@
         <div class="hero-content">
 
             <p class="hero-small">
-                WEB DEVELOPER
+                HELLO, I'M
             </p>
 
             <h1>
@@ -731,21 +728,13 @@
         <div class="skills-container">
 
             <div class="skill">HTML</div>
-
             <div class="skill">CSS</div>
-
             <div class="skill">JavaScript</div>
-
             <div class="skill">C#</div>
-
             <div class="skill">ASP.NET Core</div>
-
             <div class="skill">SQL</div>
-
             <div class="skill">Git</div>
-
             <div class="skill">GitHub</div>
-
             <div class="skill">Responsive Design</div>
 
         </div>
@@ -893,10 +882,10 @@
 
                 <p>
 
-                    A modern cafe website featuring
-                    a stylish interface, menu sections,
-                    product presentation and responsive
-                    design for a smooth user experience.
+                    A modern cafe website designed with
+                    a clean interface, responsive layout
+                    and an attractive presentation for
+                    cafe products and services.
 
                 </p>
 
@@ -904,11 +893,11 @@
                     HTML • CSS • JavaScript
                 </div>
 
-                <a href="https://eslamelqsas.github.io/Mooca-Zone-Cafe/"
+                <a href="https://github.com/eslamelqsas/Mooca-Zone-Cafe"
                    target="_blank">
 
                     <div class="project-btn">
-                        Live Demo →
+                        View Project →
                     </div>
 
                 </a>
@@ -965,7 +954,7 @@
 
             <div class="why-item">
                 <span>✓</span>
-                Website Support & Updates
+                Continuous Website Support
             </div>
 
         </div>
