@@ -1,32 +1,1047 @@
-<!-- MOOCA ZONE CAFE -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="project-card">
+<head>
 
-    <span class="project-number">
-        PROJECT 04
-    </span>
+    <meta charset="UTF-8">
 
-    <h3>
-        Mooca Zone Cafe
-    </h3>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <p>
-        A modern cafe website featuring a stylish design,
-        menu section, product details, contact information
-        and responsive layout.
-    </p>
+    <meta name="description"
+          content="Eslam ElQsas - Web Developer & Software Developer">
 
-    <div class="project-tech">
-        HTML • CSS • JavaScript
-    </div>
+    <title>Eslam ElQsas | Web Developer</title>
 
-    <a href="https://eslamelqsas.github.io/Mooca-Zone-Cafe/"
-       target="_blank">
+    <style>
 
-        <div class="project-btn">
-            View Project →
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: #e5e5e5;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            background: #080808;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: #e5e5e5;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b91c1c;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        header {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #3f0b0b 0%,
+                    #160909 35%,
+                    #080808 70%,
+                    #080808 100%
+                );
+
+            padding: 100px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-small {
+            color: #dc2626;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 65px;
+            margin: 10px 0;
+            color: #f5f5f5;
+        }
+
+        header h2 {
+            font-size: 30px;
+            color: #b91c1c;
+            margin: 15px 0;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            margin: 25px auto;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #bdbdbd;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            margin: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #991b1b;
+            color: white;
+            box-shadow: 0 8px 25px rgba(153, 27, 27, 0.25);
+        }
+
+        .primary-btn:hover {
+            background: #dc2626;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 2px solid #991b1b;
+            color: #ef4444;
+        }
+
+        .secondary-btn:hover {
+            background: #991b1b;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 50px 35px;
+
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #f5f5f5;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.9;
+            color: #bdbdbd;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 30px 25px;
+            background: #0e0e0e;
+            border: 1px solid #333;
+            border-radius: 14px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: #991b1b;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #dc2626;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 12px 20px;
+            background: #0e0e0e;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #d4d4d4;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #991b1b;
+            border-color: #991b1b;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            padding: 28px;
+            background: #0e0e0e;
+            border: 1px solid #333;
+            border-radius: 14px;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #991b1b;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-number {
+            color: #dc2626;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            color: #f5f5f5;
+            font-size: 23px;
+            margin: 12px 0;
+        }
+
+        .project-card p {
+            color: #999;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            margin: 15px 0;
+            color: #bdbdbd;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card a {
+            text-decoration: none;
+        }
+
+        .project-btn {
+            display: inline-block;
+            text-align: center;
+            padding: 11px 18px;
+            background: #991b1b;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .project-btn:hover {
+            background: #dc2626;
+        }
+
+
+        /* =========================
+           WHY WORK WITH ME
+        ========================= */
+
+        .why-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .why-item {
+            background: #0e0e0e;
+            border: 1px solid #333;
+            padding: 18px;
+            border-radius: 10px;
+            color: #bdbdbd;
+            transition: 0.3s;
+        }
+
+        .why-item:hover {
+            border-color: #991b1b;
+        }
+
+        .why-item span {
+            color: #dc2626;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            text-align: center;
+        }
+
+        .contact-text {
+            color: #999;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080808;
+            border-top: 1px solid #333;
+            color: #888;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 50px;
+        }
+
+        footer strong {
+            color: #f5f5f5;
+            font-size: 20px;
+        }
+
+        footer p {
+            margin: 10px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .projects-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 5px;
+            }
+
+            nav a {
+                margin: 6px;
+                font-size: 14px;
+            }
+
+            header {
+                min-height: 580px;
+                padding: 70px 20px;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            header h2 {
+                font-size: 24px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            section {
+                margin: 25px 15px;
+                padding: 35px 20px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+            .why-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About Me</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                Eslam ElQsas
+            </h1>
+
+            <h2>
+                Web Developer
+            </h2>
+
+            <p class="hero-description">
+
+                I build modern, responsive and user-friendly
+                websites and web applications for businesses
+                and individuals.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="hero-btn primary-btn">
+
+                    View My Work
+
+                </a>
+
+                <a href="#contact"
+                   class="hero-btn secondary-btn">
+
+                    Let's Work Together
+
+                </a>
+
+            </div>
+
         </div>
 
-    </a>
+    </header>
 
-</div>
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <h2>
+            About Me
+        </h2>
+
+        <p class="section-subtitle">
+            Building digital experiences that help businesses grow.
+        </p>
+
+        <p>
+
+            I am a Web Developer focused on creating modern,
+            responsive and user-friendly websites and web
+            applications.
+
+            I work with HTML, CSS, JavaScript, C# and ASP.NET Core
+            to build practical digital solutions for businesses
+            and individuals.
+
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services">
+
+        <h2>
+            What I Can Build
+        </h2>
+
+        <p class="section-subtitle">
+            Custom digital solutions designed around your needs.
+        </p>
+
+
+        <div class="services-container">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Business Websites
+                </h3>
+
+                <p>
+                    Professional websites for businesses,
+                    restaurants, bakeries and personal brands.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Online Ordering
+                </h3>
+
+                <p>
+                    Ordering websites where customers can
+                    browse products and submit their orders.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Web Applications
+                </h3>
+
+                <p>
+                    Functional web applications using
+                    ASP.NET Core, C# and SQL.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Responsive Design
+                </h3>
+
+                <p>
+                    Websites designed to work smoothly
+                    on phones, tablets and computers.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Custom Design
+                </h3>
+
+                <p>
+                    Modern interfaces customized to match
+                    your business identity.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Website Updates
+                </h3>
+
+                <p>
+                    Adding products, changing content,
+                    updating prices and improving websites.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <h2>
+            Skills & Technologies
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies I use to build websites and applications.
+        </p>
+
+
+        <div class="skills-container">
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">C#</div>
+
+            <div class="skill">ASP.NET Core</div>
+
+            <div class="skill">SQL</div>
+
+            <div class="skill">Git</div>
+
+            <div class="skill">GitHub</div>
+
+            <div class="skill">Responsive Design</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <h2>
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            A selection of websites and applications I have built.
+        </p>
+
+
+        <div class="projects-container">
+
+
+            <!-- PROJECT 01 -->
+
+            <div class="project-card">
+
+                <span class="project-number">
+                    PROJECT 01
+                </span>
+
+                <h3>
+                    La Tavola
+                </h3>
+
+                <p>
+
+                    A modern restaurant website featuring
+                    a detailed menu, Egyptian pricing,
+                    contact information and responsive design.
+
+                </p>
+
+                <div class="project-tech">
+                    HTML • CSS • JavaScript
+                </div>
+
+                <a href="Projects/restaurant.html">
+
+                    <div class="project-btn">
+                        View Project →
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 02 -->
+
+            <div class="project-card">
+
+                <span class="project-number">
+                    PROJECT 02
+                </span>
+
+                <h3>
+                    JobFinder
+                </h3>
+
+                <p>
+
+                    A job search platform built with
+                    ASP.NET Core MVC and C# featuring
+                    user accounts, job applications,
+                    CV upload and application tracking.
+
+                </p>
+
+                <div class="project-tech">
+                    C# • ASP.NET Core • SQL
+                </div>
+
+                <a href="Projects/JobFinder.html">
+
+                    <div class="project-btn">
+                        View Project →
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 03 -->
+
+            <div class="project-card">
+
+                <span class="project-number">
+                    PROJECT 03
+                </span>
+
+                <h3>
+                    Renato Bakery
+                </h3>
+
+                <p>
+
+                    A modern bakery website featuring
+                    products, prices, food images,
+                    responsive design and WhatsApp
+                    ordering integration.
+
+                </p>
+
+                <div class="project-tech">
+                    HTML • CSS • JavaScript
+                </div>
+
+                <a href="https://eslamelqsas.github.io/Renato-Bakery/"
+                   target="_blank">
+
+                    <div class="project-btn">
+                        View Project →
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 04 -->
+
+            <div class="project-card">
+
+                <span class="project-number">
+                    PROJECT 04
+                </span>
+
+                <h3>
+                    Mooca Zone Cafe
+                </h3>
+
+                <p>
+
+                    A modern cafe website featuring
+                    a stylish design, menu section,
+                    product details, contact information
+                    and responsive layout.
+
+                </p>
+
+                <div class="project-tech">
+                    HTML • CSS • JavaScript
+                </div>
+
+                <a href="https://eslamelqsas.github.io/Mooca-Zone-Cafe/"
+                   target="_blank">
+
+                    <div class="project-btn">
+                        View Project →
+                    </div>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY WORK WITH ME
+    ========================= -->
+
+    <section>
+
+        <h2>
+            Why Work With Me?
+        </h2>
+
+        <p class="section-subtitle">
+            My goal is to deliver useful and professional solutions.
+        </p>
+
+
+        <div class="why-container">
+
+            <div class="why-item">
+                <span>✓</span>
+                Modern & Responsive Design
+            </div>
+
+            <div class="why-item">
+                <span>✓</span>
+                Mobile Friendly Websites
+            </div>
+
+            <div class="why-item">
+                <span>✓</span>
+                Clean & Organized Code
+            </div>
+
+            <div class="why-item">
+                <span>✓</span>
+                Custom Solutions
+            </div>
+
+            <div class="why-item">
+                <span>✓</span>
+                Direct Communication
+            </div>
+
+            <div class="why-item">
+                <span>✓</span>
+                Continuous Website Support
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2>
+            Let's Work Together
+        </h2>
+
+        <p class="contact-text">
+
+            Have a website idea or need a custom web application?
+
+            Let's discuss your project and turn your idea
+            into a professional digital solution.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a href="mailto:eslamelqsas149@gmail.com"
+               class="hero-btn primary-btn">
+
+                Email Me
+
+            </a>
+
+
+            <a href="https://wa.me/201015289128"
+               target="_blank"
+               class="hero-btn secondary-btn">
+
+                WhatsApp Me
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <strong>
+            Eslam ElQsas
+        </strong>
+
+        <p>
+            Web Developer | Web Applications
+        </p>
+
+        <p>
+            © 2026 Eslam ElQsas. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
