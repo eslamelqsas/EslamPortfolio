@@ -27,6 +27,10 @@
             color: #f8fafc;
         }
 
+        a {
+            color: inherit;
+        }
+
         /* =========================
            NAVBAR
         ========================= */
@@ -67,10 +71,12 @@
             text-align: center;
 
             background:
-                radial-gradient(circle at top,
-                #172554 0%,
-                #020617 45%,
-                #020617 100%);
+                radial-gradient(
+                    circle at top,
+                    #172554 0%,
+                    #020617 45%,
+                    #020617 100%
+                );
 
             padding: 100px 20px;
             border-bottom: 1px solid #172554;
@@ -182,7 +188,7 @@
            ABOUT
         ========================= */
 
-        #about p {
+        #about p:not(.section-subtitle) {
             max-width: 800px;
             margin: auto;
             text-align: center;
@@ -267,7 +273,7 @@
 
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
@@ -295,6 +301,7 @@
             color: #3b82f6;
             font-size: 14px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .project-card h3 {
@@ -321,7 +328,7 @@
         }
 
         .project-btn {
-            display: inline-block;
+            display: block;
             text-align: center;
             padding: 11px 18px;
             background: #1d4ed8;
@@ -504,7 +511,7 @@
         <div class="hero-content">
 
             <p class="hero-small">
-                HELLO, I'M
+                WEB DEVELOPER
             </p>
 
             <h1>
@@ -764,7 +771,7 @@
         <div class="projects-container">
 
 
-            <!-- RESTAURANT -->
+            <!-- PROJECT 01 -->
 
             <div class="project-card">
 
@@ -799,7 +806,7 @@
             </div>
 
 
-            <!-- JOBFINDER -->
+            <!-- PROJECT 02 -->
 
             <div class="project-card">
 
@@ -835,7 +842,7 @@
             </div>
 
 
-            <!-- RENATO -->
+            <!-- PROJECT 03 -->
 
             <div class="project-card">
 
@@ -861,6 +868,43 @@
                 </div>
 
                 <a href="https://eslamelqsas.github.io/Renato-Bakery/"
+                   target="_blank">
+
+                    <div class="project-btn">
+                        Live Demo →
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 04 -->
+
+            <div class="project-card">
+
+                <span class="project-number">
+                    PROJECT 04
+                </span>
+
+                <h3>
+                    Mooca Zone Cafe
+                </h3>
+
+                <p>
+
+                    A modern cafe website featuring
+                    a stylish interface, menu sections,
+                    product presentation and responsive
+                    design for a smooth user experience.
+
+                </p>
+
+                <div class="project-tech">
+                    HTML • CSS • JavaScript
+                </div>
+
+                <a href="https://eslamelqsas.github.io/Mooca-Zone-Cafe/"
                    target="_blank">
 
                     <div class="project-btn">
@@ -921,7 +965,7 @@
 
             <div class="why-item">
                 <span>✓</span>
-                Continuous Website Support
+                Website Support & Updates
             </div>
 
         </div>
@@ -951,9 +995,7 @@
 
         <div class="contact-buttons">
 
-            <!-- ضع الإيميل بتاعك هنا -->
-
-            <a href="mailto:YOUR_EMAIL@gmail.com"
+            <a href="mailto:eslamelqsas149@gmail.com"
                class="hero-btn primary-btn">
 
                 Email Me
@@ -961,9 +1003,7 @@
             </a>
 
 
-            <!-- ضع رقم الواتساب بتاعك هنا -->
-
-            <a href="https://wa.me/YOUR_NUMBER"
+            <a href="https://wa.me/201015289128"
                target="_blank"
                class="hero-btn secondary-btn">
 
